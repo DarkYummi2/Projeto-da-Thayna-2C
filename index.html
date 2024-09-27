@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ritual das Três Sombras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+        #story-text {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            background-color: #2b2b2b;
+        }
+        button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #777;
+        }
+        .fixed-image {
+            max-width: 100%; /* Adapta a imagem ao tamanho da tela */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-bottom: 20px; /* Espaço abaixo da imagem */
+        }
+    </style>
+</head>
+<body>
+    <h1>O Ritual das Três Sombras</h1>
+    <img src="inicial.jfif" class="fixed-image" alt="Ritual das Três Sombras">
+    <div id="story-text">
+        <p>Abigail, Alexia e Chloe sempre foram fascinadas pelo desconhecido. Ao encontrarem um livro de feitiços na biblioteca, ficaram intrigadas pelo "Ritual das Três Sombras", que prometia revelar segredos ocultos. Mesmo com o aviso de perigo, elas decidiram realizar o ritual em uma cabana abandonada na floresta.</p>
+    </div>
+    <div id="buttons">
+        <button onclick="chooseOption('opcao1')">Continuar</button>
+    </div>
+
+    <script>
+        function chooseOption(choice) {
+            const storyText = document.getElementById('story-text');
+            const buttons = document.getElementById('buttons');
+
+            switch(choice) {
+                case 'opcao1':
+                    storyText.innerHTML = "<p>Na noite do ritual, as três amigas seguiram para a cabana isolada. O local estava deserto e sinistro. Elas prepararam o círculo de sal, posicionaram as velas e se prepararam para iniciar o ritual.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao2')">Chloe começa a recitar o feitiço</button>
+                        <button onclick="chooseOption('opcao3')">Alexia hesita, mas decide continuar</button>
+                    `;
+                    break;
+
+                case 'opcao2':
+                    storyText.innerHTML = "<p>Chloe, ousada, começou a recitar o feitiço. As velas tremiam, e um frio sobrenatural tomou conta da cabana. As sombras começaram a aparecer, crescendo e se deformando no centro do círculo.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao4')">As sombras avançam rapidamente</button>
+                        <button onclick="chooseOption('opcao5')">Uma sombra se aproxima de Chloe</button>
+                    `;
+                    break;
+
+                case 'opcao3':
+                    storyText.innerHTML = "<p>Alexia hesitou, sentindo o medo tomar conta de si. Mas, ao ver Chloe avançando no ritual, decidiu não ficar para trás. Ao recitar as palavras, as sombras começaram a surgir, e algo sombrio parecia tomar conta da cabana.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao4')">As sombras avançam rapidamente</button>
+                        <button onclick="chooseOption('opcao6')">Alexia tenta interromper o ritual</button>
+                    `;
+                    break;
+
+                case 'opcao4':
+                    storyText.innerHTML = "<p>As sombras cresceram rapidamente, envolvendo cada uma das amigas. Elas sentiram um peso nas suas almas, como se algo estivesse sugando suas energias vitais. As sombras sussurravam, prometendo segredos e desejos em troca de suas essências.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao7')">Abigail tenta escapar do círculo</button>
+                        <button onclick="chooseOption('opcao8')">Chloe confronta as sombras</button>
+                    `;
+                    break;
+
+                case 'opcao5':
+                    storyText.innerHTML = "<p>Uma das sombras se aproximou lentamente de Chloe. Ela, corajosa, estendeu a mão, mas a sombra agarrou seu braço, sussurrando segredos obscuros que a fizeram estremecer. Ela tentou lutar, mas sentia sua força sendo drenada.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao7')">Abigail tenta interromper o ritual</button>
+                        <button onclick="chooseOption('opcao9')">Chloe tenta usar o livro para reverter o feitiço</button>
+                    `;
+                    break;
+
+                case 'opcao6':
+                    storyText.innerHTML = "<p>Desesperada, Alexia tentou interromper o ritual, mas foi tarde demais. As sombras já haviam sido libertadas. Elas sussurravam, prometendo poder e conhecimento em troca de suas almas.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao8')">Chloe confronta as sombras</button>
+                        <button onclick="chooseOption('opcao9')">Alexia tenta desfazer o ritual com o livro</button>
+                    `;
+                    break;
+
+                case 'opcao7':
+                    storyText.innerHTML = "<p>Abigail, em pânico, tentou correr para fora do círculo, mas as sombras a imobilizaram. Elas começaram a sussurrar em sua mente, explorando seus medos mais profundos. O medo a consumia, e ela sentia que não havia escapatória.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao10')">Chloe tenta salvar Abigail</button>
+                        <button onclick="chooseOption('opcao11')">Alexia propõe um pacto com as sombras</button>
+                    `;
+                    break;
+
+                case 'opcao8':
+                    storyText.innerHTML = "<p>Chloe, desafiadora, encarou as sombras. “O que vocês querem?” perguntou. As sombras responderam em uma língua antiga, oferecendo conhecimento e poder em troca de suas almas. Chloe hesitou, mas sabia que havia algo mais por trás da oferta.</p>";
+                    buttons.innerHTML = `
+                        <button onclick="chooseOption('opcao12')">Chloe aceita o pacto com as sombras</button>
+                        <button onclick="chooseOption('opcao13')">Chloe rejeita o pacto e tenta lutar</button>
+                    `;
+                    break;
+
+                // Finais alternativos
+                case 'opcao9':
+                    storyText.innerHTML = "<p>Desesperadas, as amigas tentaram usar o livro para reverter o ritual, mas as sombras eram poderosas demais. O Véu das Sombras já havia sido aberto, e agora suas almas estavam presas entre os mundos.</p>";
+                    buttons.innerHTML = `<button onclick="location.reload()">Recomeçar</button>`;
+                    break;
+
+                case 'opcao10':
+                    storyText.innerHTML = "<p>Chloe correu em direção a Abigail, tentando puxá-la para fora do círculo, mas as sombras a impediram. Chloe sentiu as sombras invadindo sua mente, oferecendo um pacto em troca da vida de suas amigas.</p>";
+                    buttons.innerHTML = `<button onclick="location.reload()">Recomeçar</button>`;
+                    break;
+
+                case 'opcao11':
+                    storyText.innerHTML = "<p>Alexia, em um ato de desespero, propôs um pacto às sombras. Em troca de suas almas, elas poderiam ter o poder que desejavam. As sombras aceitaram, e as amigas desapareceram na escuridão, deixando apenas a cabana vazia.</p>";
+                    buttons.innerHTML = `<button onclick="location.reload()">Recomeçar</button>`;
+                    break;
+
+                case 'opcao12':
+                    storyText.innerHTML = "<p>Chloe aceitou o pacto com as sombras, ganhando o poder que elas prometeram, mas ao custo das almas de suas amigas. Agora, ela estava conectada ao mundo sombrio, e o preço a ser pago seria eterno.</p>";
+                    buttons.innerHTML = `<button onclick="location.reload()">Recomeçar</button>`;
+                    break;
+
+                case 'opcao13':
+                    storyText.innerHTML = "<p>Chloe tentou lutar contra as sombras, mas seu poder era limitado. As sombras consumiram as três amigas, deixando apenas seus ecos no Véu das Sombras, à espera da próxima vítima.</p>";
+                    buttons.innerHTML = `<button onclick="location.reload()">Recomeçar</button>`;
+                    break;
+
+                default:
+                    storyText.innerHTML = "Algo deu errado. Recarregue a página.";
+                    buttons.innerHTML = `<button onclick="location.reload()">Recarregar</button>`;
+                    break;
+            }
+        }
+    </script>
+</
